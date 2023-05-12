@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "type": "facebook",
+    "username": "@nathanf",
+    "numbers": 1987,
+    "increase": true,
+    "recent": 12
+  },
+  {
+    "id": "2",
+    "type": "twitter",
+    "username": "@nathanf",
+    "numbers": 1044,
+    "increase": true,
+    "recent": 99
+  },
+  {
+    "id": "3",
+    "type": "instagram",
+    "username": "@realnathanf",
+    "numbers": "11k",
+    "increase": true,
+    "recent": 1099
+  },
+  {
+    "id": "4",
+    "type": "youtube",
+    "username": "Nathan F.",
+    "numbers": 8239,
+    "increase": false,
+    "recent": 144
+  }
+]

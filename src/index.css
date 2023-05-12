@@ -1,13 +1,93 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.switch {
+  --secondary-container: #3a4b39;
+  --primary: #84da89;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.7em;
+  height: 1.8em;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.switch input {
+  display: none;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  transition: 0.2s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: hsl(228, 28%, 20%);
+  transition: 0.4s;
+}
+
+input:checked + .slider::before {
+  background-color: hsl(230, 22%, 74%);
+}
+
+input:checked + .slider {
+  background-color: hsl(230, 22%, 74%);
+  background-image: linear-gradient(
+    to right,
+    hsl(228, 12%, 44%),
+    hsl(228, 12%, 44%)
+  );
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(230, 22%, 74%);
+  background-image: linear-gradient(
+    to right,
+    hsl(228, 12%, 44%),
+    hsl(228, 12%, 44%)
+  );
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.9em);
+}
+
+/* .border-facebook {
+  border-top: 4px solid hsl(208, 92%, 53%);
+}
+.border-twitter {
+  border: 4px solid hsl(203, 89%, 53%);
+}
+.border-instagram {
+  border-top-width: 4px;
+  border-top: solid;
+  border-image: linear-gradient(
+    to right,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+}
+.border-youtube {
+  border: 4px solid;
+} */
