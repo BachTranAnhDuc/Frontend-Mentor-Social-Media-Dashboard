@@ -24,7 +24,7 @@ const Social: FC<Props> = ({
 }): JSX.Element => {
   return (
     <div
-      className={`relative bg-themes-dark-card 3xl:px-7 3xl:py-12 2xl:px-7 2xl:py-6 xl:py-5 lg:px-6 lg:py-4 md:px-5 md:py-4 sm:px-4 sm:py-6 rounded-sm grid grid-rows-max-content_1fr_max-content justify-items-center items-center gap-y-5 cursor-pointer hover:bg-themes-dark-cardHover transition-all duration-200 ease-in-out`}
+      className={`relative dark:bg-themes-dark-card bg-themes-light-card 3xl:px-7 3xl:py-12 2xl:px-7 2xl:py-6 xl:py-5 lg:px-6 lg:py-4 md:px-5 md:py-4 sm:px-4 sm:py-6 rounded-sm grid grid-rows-max-content_1fr_max-content justify-items-center items-center gap-y-5 cursor-pointer dark:hover:bg-themes-dark-cardHover hover:bg-themes-light-cardHover transition-all duration-200 ease-in-out`}
     >
       <div
         className={`absolute top-0 left-0 w-full h-1 rounded-t-sm ${
@@ -51,16 +51,16 @@ const Social: FC<Props> = ({
           }
           alt={type}
         />
-        <p className="font-medium lg:text-base md:text-sm sm:text-base text-themes-dark-text-blue">
+        <p className="font-medium lg:text-base md:text-sm sm:text-base dark:text-themes-dark-text-blue text-themes-light-text-dark">
           {username}
         </p>
       </div>
 
       <div className="grid grid-rows-repeat(2_max-content) gap-y-1 justify-items-center">
-        <h1 className="font-bold 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-4xl text-themes-dark-text-white">
+        <h1 className="font-bold 2xl:text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-4xl dark:text-themes-dark-text-white text-themes-light-text-verydark">
           {followers}
         </h1>
-        <p className="uppercase font-light 2xl:text-sm xl:text-xs lg:text-[12px] md:text-[10px] sm:text-sm text-themes-dark-text-blue lg:tracking-followers md:tracking-[4px] sm:tracking-[6px]">
+        <p className="uppercase font-light 2xl:text-sm xl:text-xs lg:text-[12px] md:text-[10px] sm:text-sm dark:text-themes-dark-text-blue text-themes-light-text-dark lg:tracking-followers md:tracking-[4px] sm:tracking-[6px]">
           {type === 'youtube' ? 'subscribers' : 'followers'}
         </p>
       </div>

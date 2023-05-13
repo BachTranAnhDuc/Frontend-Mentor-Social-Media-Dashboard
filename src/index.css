@@ -48,25 +48,17 @@
 }
 
 input:checked + .slider::before {
-  background-color: hsl(230, 22%, 74%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 input:checked + .slider {
   background-color: hsl(230, 22%, 74%);
-  background-image: linear-gradient(
-    to right,
-    hsl(228, 12%, 44%),
-    hsl(228, 12%, 44%)
-  );
+  background-image: linear-gradient(to right, #d3d3e4, #d3d3e4);
 }
 
 input:focus + .slider {
   box-shadow: 0 0 1px hsl(230, 22%, 74%);
-  background-image: linear-gradient(
-    to right,
-    hsl(228, 12%, 44%),
-    hsl(228, 12%, 44%)
-  );
+  background-image: linear-gradient(to right, #d3d3e4, #d3d3e4);
 }
 
 input:checked + .slider:before {

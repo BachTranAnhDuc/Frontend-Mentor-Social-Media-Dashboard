@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
-  // darkMode: 'class',
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '375px',
@@ -61,6 +61,7 @@ module.exports = {
             white: 'hsl(0, 0%, 100%)',
           },
           card: 'hsl(227, 47%, 96%)',
+          cardHover: '#e9e9f1',
           text: {
             dark: 'hsl(228, 12%, 44%)',
             verydark: 'hsl(230, 17%, 14%)',
