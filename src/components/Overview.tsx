@@ -23,7 +23,7 @@ const Overview: FC<Props> = ({
   percents,
 }): JSX.Element => {
   return (
-    <div className="bg-themes-dark-card px-7 py-5 rounded-sm grid grid-cols-card_overview grid-rows-card_overview gap-x-2 gap-y-4 items-center cursor-pointer hover:bg-themes-dark-cardHover transition-all duration-200 ease-in-ou">
+    <div className="bg-themes-dark-card xl:px-7 xl:py-5 lg:px-5 lg:py-4 md:px-5 md:py-4 sm:px-8 sm:py-6 rounded-sm grid grid-cols-card_overview grid-rows-card_overview gap-x-2 gap-y-4 items-center cursor-pointer hover:bg-themes-dark-cardHover transition-all duration-200 ease-in-ou">
       <h2 className="font-semibold text-base text-themes-dark-text-blue">
         {title}
       </h2>
@@ -39,13 +39,16 @@ const Overview: FC<Props> = ({
             : iconYoutube
         }
         alt={type}
+        className="md:justify-self-end"
       />
 
-      <p className="font-bold text-3xl text-themes-dark-text-white">{amount}</p>
+      <p className="font-bold 2xl:text-3xl xl:text-2xl lg:text-2xl md:text-xl sm:text-xl text-themes-dark-text-white">
+        {amount}
+      </p>
 
       <div className="grid grid-cols-repeat(2_max-content) gap-x-1 items-center">
         <img src={increase ? iconUp : iconDown} alt="up" />
-        <p className="font-medium text-sm text-primary-green">
+        <p className="font-medium lg:text-sm md:text-xs sm:text-xs text-primary-green md:justify-self-end">
           {percents}
           <span>%</span>
         </p>

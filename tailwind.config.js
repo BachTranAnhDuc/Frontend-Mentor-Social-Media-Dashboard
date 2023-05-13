@@ -4,11 +4,22 @@ module.exports = {
   // darkMode: 'class',
   theme: {
     screens: {
-      mobile: '320px',
-      largeMobile: '480px',
-      tablet: '768px',
-      mediumScreen: '992px',
-      largeScreen: '1200px',
+      sm: '375px',
+      // => @media (min-width: 640px) { ... }
+
+      md: '768px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      xl: '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1440px',
+      // => @media (min-width: 1536px) { ... }
+      '3xl': '1800px',
+      // => @media (min-width: 1536px) { ... }
     },
     colors: {
       primary: {
@@ -71,6 +82,7 @@ module.exports = {
       gridTemplateRows: {
         'max-content_1fr_max-content': 'max-content 1fr max-content',
         'repeat(2_max-content)': 'repeat(2, max-content)',
+        'repeat(3_max-content)': 'repeat(3, max-content)',
         card_overview: 'max-content 1fr',
       },
       letterSpacing: {
